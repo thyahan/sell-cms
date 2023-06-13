@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const iframDomain = "https://super-sell.vercel.app";
+const myDomain = "https://sell-cms.vercel.app";
 
 export default function HomePage() {
   const router = useRouter();
@@ -42,7 +43,7 @@ export default function HomePage() {
       {isOpen && (
         <div className="w-[320px] h-[640px]">
           <iframe
-            src="https://super-sell.vercel.app/payment-success?domain=http://localhost:3000&redirect_url=https://edupluz.com/"
+            src={`${iframDomain}/payment-success?domain=${myDomain}&redirect_url=https://edupluz.com/`}
             width="100%"
             height="100%"></iframe>
         </div>
